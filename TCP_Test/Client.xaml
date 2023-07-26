@@ -10,13 +10,13 @@
         <!-- Button 속성-->
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Width" Value="80"/>
-            <Setter Property="Height" Value="35"/>
+            <Setter Property="Height" Value="30"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Background" Value="#ff4b4b"/>
             <Setter Property="BorderBrush" Value="LightGray"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Margin" Value="10,0,30,0"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
 
             <Setter Property="Template">
                 <Setter.Value>
@@ -42,16 +42,17 @@
         <Style x:Key="TextBoxSytle" TargetType="TextBox">
             <!--<Setter Property="Width" Value="100"/>
             <Setter Property="Height" Value="20"/>-->
-            <!--<Setter Property="Margin" Value="2"/>-->
+            <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Padding" Value="3"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
         </Style>
 
         <!-- 입력 Box 테두리-->
         <Style x:Key="BorderStyle" TargetType="Border">
             <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="30"/>
             <Setter Property="Background" Value="AliceBlue"/>
             <Setter Property="BorderBrush" Value="LightGray"/>
             <Setter Property="BorderThickness" Value="1"/>
@@ -80,51 +81,61 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="5,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-            <StackPanel Orientation="Horizontal" Grid.Row="0">
-                <Button x:Name="ConnectButton" Content="Connect" Style="{StaticResource ButtonStyle}"/>
-
-                <!-- IP, Port-->
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                        <TextBlock Text="IP :" Style="{StaticResource TextBlockStyle}"/>
-                        <Border Style="{StaticResource BorderStyle}">
-                            <TextBox Text="Input IP Address" x:Name="IPInput" Style="{StaticResource TextBoxSytle}"/>
-                        </Border>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Port :" Style="{StaticResource TextBlockStyle}"/>
-                        <Border Style="{StaticResource BorderStyle}">
-                            <TextBox Text="Input Port Number" x:Name="PortInput" Style="{StaticResource TextBoxSytle}"/>
-                        </Border>
-                    </StackPanel>
+                <!-- IP input -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Height="40">
+                    <TextBlock Text="IP :" Style="{StaticResource TextBlockStyle}"/>
+                    <Border Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Input IP Address" x:Name="IPInput" Style="{StaticResource TextBoxSytle}"/>
+                    </Border>
                 </StackPanel>
-            </StackPanel>
-
-            <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <Button x:Name="SendButton" Content="Send" Grid.Column="0" Grid.Row="1" Style="{StaticResource ButtonStyle}"/>
-
-                <!-- Length, Count -->
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <StackPanel Orientation="Horizontal"  Margin="0,0,0,5">
-                        <TextBlock Text="Length : " Style="{StaticResource TextBlockStyle}"/>
-                        <Border Style="{StaticResource BorderStyle}">
-                            <TextBox Text="Input Length" x:Name="LengthInput" Style="{StaticResource TextBoxSytle}"/>
-                        </Border>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Count :" Style="{StaticResource TextBlockStyle}"/>
-                        <Border Style="{StaticResource BorderStyle}">
-                            <TextBox Text="Input Count" x:Name="CountInput" Style="{StaticResource TextBoxSytle}"/>
-                        </Border>
-                    </StackPanel>
+                <!-- Button Connect -->
+                <Button x:Name="ConnectButton" Grid.Row="1" Content="Connect"  HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
+                <!-- Port Input -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Height="40">
+                    <TextBlock Text="Port :" Style="{StaticResource TextBlockStyle}" />
+                    <Border Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Input Port Number" x:Name="PortInput" Style="{StaticResource TextBoxSytle}"/>
+                    </Border>
                 </StackPanel>
-            </StackPanel>
+            </Grid>
 
-            <StackPanel Grid.Row="2" Orientation="Horizontal">
-                <Button x:Name="DisconnectButton" Content="Disconnect" Style="{StaticResource ButtonStyle}"/>
-            </StackPanel>
+            <Grid Grid.Row="1" Margin="5,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!-- Length Input -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal"  Margin="0,0,0,5" Height="40">
+                    <TextBlock Text="Length : " Style="{StaticResource TextBlockStyle}"/>
+                    <Border Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Input Length" x:Name="LengthInput" Style="{StaticResource TextBoxSytle}"/>
+                    </Border>
+                </StackPanel>
+                <!-- Count Input -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Height="40">
+                    <TextBlock Text="Count :" Style="{StaticResource TextBlockStyle}"/>
+                    <Border Style="{StaticResource BorderStyle}">
+                        <TextBox Text="Input Count" x:Name="CountInput" Style="{StaticResource TextBoxSytle}"/>
+                    </Border>
+                </StackPanel>
+                <!-- Button Send -->
+                <Button x:Name="SendButton" Grid.Row="1" Content="Send" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+
+            
+            <Grid Grid.Row="2" Margin="5,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="DisconnectButton" Grid.Row="1" Content="Disconnect" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
+            </Grid>
             
            
 
