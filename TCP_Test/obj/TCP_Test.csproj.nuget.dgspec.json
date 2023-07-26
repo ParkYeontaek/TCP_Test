@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT\\TCP_Test\\TCP_Test\\TCP_Test.csproj": {}
+    "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT_Dong\\TCP_Test\\TCP_Test\\TCP_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT\\TCP_Test\\TCP_Test\\TCP_Test.csproj": {
+    "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT_Dong\\TCP_Test\\TCP_Test\\TCP_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT\\TCP_Test\\TCP_Test\\TCP_Test.csproj",
+        "projectUniqueName": "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT_Dong\\TCP_Test\\TCP_Test\\TCP_Test.csproj",
         "projectName": "TCP_Test",
-        "projectPath": "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT\\TCP_Test\\TCP_Test\\TCP_Test.csproj",
+        "projectPath": "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT_Dong\\TCP_Test\\TCP_Test\\TCP_Test.csproj",
         "packagesPath": "C:\\Users\\parky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT\\TCP_Test\\TCP_Test\\obj\\",
+        "outputPath": "C:\\Users\\parky\\OneDrive\\바탕 화면\\GIT_Dong\\TCP_Test\\TCP_Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
